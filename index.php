@@ -21,5 +21,15 @@ $f3->route('GET /', function(){
     echo $view->render('views/home.html');
 });
 
+// define another route
+// called breakfast
+$f3->route('GET /breakfast', function(){
+    //echo '<h1>Welcome to my breakfast page</h1>';
+
+    //display a page called home.html
+    $view = new Template();
+    echo $view->render('views/bfast.html');
+});
+
 //run fat free
 $f3->run();
