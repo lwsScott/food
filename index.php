@@ -31,5 +31,25 @@ $f3->route('GET /breakfast', function(){
     echo $view->render('views/bfast.html');
 });
 
+// define another route
+// called breakfast/green-eggs
+$f3->route('GET /breakfast/green-eggs', function(){
+    //echo '<h1>Welcome to my breakfast page</h1>';
+
+    //display a page called home.html
+    $view = new Template();
+    echo $view->render('views/greenEggsAndHam.html');
+});
+
+// define another route
+// called breakfast/green-eggs
+$f3->route('GET /breakfast/pancakes', function(){
+    //echo '<h1>Welcome to my breakfast page</h1>';
+
+    //display a page called home.html
+    $view = new Template();
+    echo $view->render('views/pancakes.html');
+});
+
 //run fat free
 $f3->run();
